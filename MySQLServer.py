@@ -1,5 +1,4 @@
 import mysql.connector
-from mysql.connector import Error
 from dotenv import load_dotenv
 import os
 
@@ -22,7 +21,7 @@ try:
     print("Database 'alx_book_store' created successfully")
   
 # catch errors
-except Error as e:
+except mysql.connector.Error as e:
   print('Error connecting to database', e)
 
 finally:
